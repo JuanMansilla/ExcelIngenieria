@@ -1,0 +1,48 @@
+﻿<Window x:Class="CapaPresentacion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CapaPresentacion"
+        xmlns:System="clr-namespaceTongue Tiedystem;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Produccion" Height="257" Width="269" Foreground="Black" BorderBrush="#FF254163" >
+
+    <Grid Background="#E8E8E8" Margin="0,0,0,-1">
+
+
+        <CheckBox x:Name="ChBx_Fecha" Content="Rango Fechas" HorizontalAlignment="Left" 
+                  Margin="24,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0,0.3" IsChecked="False" Checked="ChBx_Fecha_Checked"/>
+        <CheckBox x:Name="checkBox_Copy" Content="CheckBox" HorizontalAlignment="Left" 
+                  Margin="159,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0,0.3"/>
+        <Button x:Name="Btn_Aceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="30,182,0,0" 
+                VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.333,-0.75" Background="#FF92BBE4"   
+                Click="Btn_Aceptar_Click"/>
+        <Button x:Name="Btn_Cancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="155,182,0,0" 
+                VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.333,-0.75" Background="#FF92BBE4"  
+                Click="Btn_Cancelar_Click"/>
+
+        <GroupBox x:Name="GB_FechaInial" Header="Fecha Inicial:" HorizontalAlignment="Left" 
+                  Margin="23,44,0,0" VerticalAlignment="Top" Width="216" Height="52">
+            <Grid  >
+                <DatePicker x:Name="FechaIncio" HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" Background="{x:Null}" IsEnabledChanged="FIni_Select" Margin="10,5,0,0" 
+                    SelectedDateChanged="FechaIncio_SelectedDateChanged"/>
+                <RadioButton x:Name="RB_FID" Content="D" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="125,10,0,0" IsChecked="True"/>
+                <RadioButton x:Name="RB_FIN" Content="N" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="165,10,0,0"/>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox x:Name="GB_FechaFinal" Header="Fecha Final:" HorizontalAlignment="Left" 
+            Margin="22,110,0,0" VerticalAlignment="Top" Width="216" Height="52" IsEnabled="False">
+            <Grid  >
+                <DatePicker x:Name="FechaFin" HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" Background="{x:Null}" IsEnabledChanged="FIni_Select" Margin="10,5,0,0" IsEnabled="False"
+                            SelectedDateChanged="FechaFin_SelectedDateChanged"/>
+                <RadioButton x:Name="RB_FFD" Content="D" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="125,10,0,0" />
+                <RadioButton x:Name="RB_FFN" Content="N" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="165,10,0,0" IsChecked="True"/>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>
